@@ -30,6 +30,6 @@
     "babel-loader": "^8.0.4"
   },
   "dependencies": {
-    "chatux": "^1.0.11"
+    "chatux": "^1.1.0"
   }
 }
