@@ -34,12 +34,7 @@ module.exports = (env, argv) => {
                 use: [{
                     loader: 'babel-loader',
                     options: {
-                        presets: [['@babel/preset-env',
-                            {
-                                'modules': 'false',//commonjs,amd,umd,systemjs,auto
-                                'useBuiltIns': 'usage',
-                                'targets': '> 0.25%, not dead'
-                            }]]
+                        presets: [['@babel/preset-env']]
                     }
                 }]
             }]
