@@ -27,7 +27,7 @@ if (app.get('env') === 'production') {
 
 
 // set mddielware for CORS
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept");
   next();
@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 
 //provide json api
 app.set('json spaces', 2);
-app.get('/chat', function(req, res) {
+app.get('/chat', function (req, res) {
 
   //Get "text" parameter from request
   const userInputText = req.query.text;
@@ -70,11 +70,11 @@ app.get('/chat', function(req, res) {
       });
 
       const opts = [];
-      opts.push({ label: 'label1', value: 'value1' });
-      opts.push({ label: 'label2', value: 'value2' });
-      opts.push({ label: 'label3', value: 'value3' });
+      opts.push({label: 'label1', value: 'value1'});
+      opts.push({label: 'label2', value: 'value2'});
+      opts.push({label: 'label3', value: 'value3'});
 
-      msg.push({ type: "option", options: opts });
+      msg.push({type: "option", options: opts});
 
     } else if (userInputText == "show image") {
 
@@ -163,7 +163,9 @@ const opt = {
   api: {
     endpoint: 'http://localhost:8081/chat',//URL of chat server
     method: 'GET',                         //HTTP METHOD
-    dataType: 'json'                       //DATA TYPE
+    dataType: 'json',                       //DATA TYPE
+    escapeUserInput: true,// true:Escaping HTML tags in user input text when submitting to the server. default is false.
+
   },
   bot: {
     botPhoto: 'https://riversun.github.io/img/riversun_144.png',//URL of bot photo image
@@ -182,7 +184,7 @@ const opt = {
 //initialize
 chatux.init(opt);
 
-const isAutoOpenWindow=true;
+const isAutoOpenWindow = true;
 chatux.start(isAutoOpenWindow);
 
 
