@@ -1,6 +1,6 @@
 {
   "name": "chatux-server-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,6 @@
     "babel-loader": "^8.0.4"
   },
   "dependencies": {
-    "chatux": "^1.2.0"
+    "chatux": "^1.3.0"
   }
 }
